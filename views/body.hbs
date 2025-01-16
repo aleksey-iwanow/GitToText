@@ -1,0 +1,135 @@
+<div class="main">
+   <div class="flex col-fx center-flex" style="padding: 10px; margin-top: 50px; align-items: center">
+      <h1 style="font-size: 38px; max-width: 500px; text-align: center">Конвертер репозитория в текст</h1>
+      <p class="m_p2" style="font-size: 17px;">Удобно и быстро выводит текстовую информацию о дереве и содержимом
+         репозитория!</p>
+   </div>
+   <container>
+      <shadow_container>
+
+      </shadow_container>
+      <content>
+         
+         <form action="/get_repo">
+            <div class="flex">
+               <div class="full-w relative inl_block">
+                  <shadow_container></shadow_container>
+                  <input id="url_input"type="text" name="url" class="full-w default_input" placeholder="https://github.com/...">
+
+               </div>
+               <div style="margin-left: 20px;" class="relative inl_block">
+                  <shadow_container></shadow_container>
+                  <button class="full-h cnt-border-rad relative">
+                     <div class="flex">
+                        <div id="load_panel" hidden><div class="circle inl_block"></div></div>
+                        
+                        <div class="inl_block"><p>Преобразовать</p></div>
+                        
+                     </div>
+                     
+                  </button>
+               </div>
+            </div>
+         </form>
+         <p class="m_p2 lm_p bm_p">
+            Можете воспользоваться этими репозиториями для теста ->
+            </p>
+         <div class="flex">
+            <div class="relative inl_block full-h" style="margin-left: 15px;">
+               <shadow_container></shadow_container>
+               <a href="javascript:set_input('https://github.com/secdev/scapy')" class="flex center-flex btn-yellow btn full-h cnt-border-rad relative" href="#">
+                  <p>Scapy</p>
+               </a>
+            </div>
+            <div class="relative inl_block full-h" style="margin-left: 15px;">
+               <shadow_container></shadow_container>
+               <a href="javascript:set_input('https://github.com/aleksey-iwanow/MusicPlayer')" class="flex center-flex btn-yellow btn full-h cnt-border-rad relative" href="#">
+                  <p>MusicPlayer C#</p>
+               </a>
+            </div>
+            <div class="relative inl_block full-h" style="margin-left: 15px;">
+               <shadow_container></shadow_container>
+               <a href="javascript:set_input('https://github.com/octokit/octokit.js')" class="flex center-flex btn-yellow btn full-h cnt-border-rad relative">
+                  <p>Octokit</p>
+               </a>
+            </div>
+         </div>
+      </content>
+
+   </container>
+   <container hidden id="info" class="grey_color">
+      <shadow_container></shadow_container>
+      <content>
+         <div class="flex" style="gap: 1.5rem;">
+
+            <div style="flex: 0.6">
+               <div class="flex center-flex" style="height: 35px;">
+                  <h3>Краткие сведения</h3>
+               </div>
+               <div class="textarea-container full-w relative inl_block">
+                  <shadow_container class="brad-low"></shadow_container>
+                  <textarea id="infoRepo" style="height: 150px;" readonly class="not-resizeable full-w">
+
+                  </textarea>
+               </div>
+               <div class="flex col-fx">
+                  <div class="relative inl_block full-h" style="margin-left: 15px;width: fit-content;">
+                     <shadow_container></shadow_container>
+                     <a class="flex center-flex btn full-h cnt-border-rad relative" href="#">
+                        <p>скачать</p>
+                     </a>
+                  </div>
+                  <div class="relative inl_block full-h" style="width: fit-content;margin-top: 14px;margin-left: 15px;">
+                     <shadow_container></shadow_container>
+                     <a class="flex center-flex btn full-h cnt-border-rad relative" href="#">
+                        <p>копировать все</p>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="flx1">
+               <div class="flex center-flex" style="height: 35px;">
+                  <h3 class="inl_block">Структура каталогов</h3>
+                  <div class="relative inl_block full-h" style="margin-left: 15px;">
+                     <shadow_container></shadow_container>
+                     <a id="copy_btn1" href="javascript:copy('#tree', '#copy_btn1')" class="copy_btn flex center-flex btn full-h cnt-border-rad relative">
+                        <p>копировать</p>
+                     </a>
+                  </div>
+               </div>
+
+
+               <div class="textarea-container full-w relative inl_block">
+                  <shadow_container class="brad-low"></shadow_container>
+                  <textarea  style="height: 300px" id="tree" readonly class="full-w">
+
+                  </textarea>
+               </div>
+
+            </div>
+
+
+         </div>
+         <div style="margin-top: 30px;">
+            <div class="flex center-flex" style="height: 35px;">
+               <h3 class="inl_block">Содержимое файлов</h3>
+               <div class="relative inl_block full-h" style="margin-left: 15px;">
+                  <shadow_container></shadow_container>
+                  <a id="copy_btn2" href="javascript:copy('#files_content', '#copy_btn2')" class="copy_btn flex center-flex btn full-h cnt-border-rad relative">
+                     <p>копировать</p>
+                  </a>
+               </div>
+            </div>
+
+
+            <div class="textarea-container full-w relative inl_block">
+               <shadow_container class="brad-low"></shadow_container>
+               <textarea id="files_content" style="height: 500px" readonly class="full-w">
+
+                  </textarea>
+            </div>
+         </div>
+      </content>
+
+   </container>
+</div>
