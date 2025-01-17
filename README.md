@@ -1,4 +1,4 @@
-![sdsd](https://github.com/aleksey-iwanow/GitToText/blob/master/screenshots_/image.png)
+![img](https://github.com/aleksey-iwanow/GitToText/blob/main/screenshots_/image.png)
 
 
 # How to use?
